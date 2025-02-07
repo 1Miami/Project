@@ -1,44 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <!-- Definindo a codificação de caracteres para UTF-8, permitindo o suporte a caracteres especiais -->
     <meta charset="UTF-8">
+    <!-- Definindo as configurações de responsividade para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo CSS que estiliza a página de registro -->
     <link rel="stylesheet" href="../css/register.css">
+    <!-- Título da página, que aparece na aba do navegador -->
     <title>Hubfy - Register</title>
 </head>
 <body>
+    <!-- Círculo de fundo estilizado com filtro de desfoque, posição absoluta e largura fixa -->
     <div id="circuloBackGround"></div>
     
     <main>
+        <!-- Contêiner para o logo da aplicação -->
         <div class="logo-container">
+            <!-- Exibindo a imagem do logo da aplicação -->
             <img src="../src/logo2.png" alt="">
         </div>
 
+        <!-- Formulário de registro do usuário -->
         <form id="registerForm" enctype="multipart/form-data">
+            <!-- Seção para o upload da foto de perfil -->
             <div class="profile-upload">
+                <!-- Pré-visualização da foto de perfil, exibindo um ícone de "mais" antes de selecionar uma imagem -->
                 <div class="profile-preview" id="profilePreview">
+                    <!-- Imagem de pré-visualização da foto (oculta inicialmente) -->
                     <img src="" alt="Pré-visualização" id="previewImage" style="display: none;">
+                    <!-- Ícone de "+" que será exibido se a imagem não tiver sido carregada -->
                     <div class="upload-icon" id="defaultIcon">+</div>
                 </div>
+                <!-- Campo de input para carregar a foto de perfil (oculto) -->
                 <input type="file" id="profilePhoto" name="profilePhoto" accept="image/*" style="display: none;">
+                <!-- Texto de instrução para o usuário, pedindo para clicar e adicionar uma foto -->
                 <p class="upload-text">Clique para adicionar sua foto</p>
             </div>
 
+            <!-- Campo de entrada para o nome completo do usuário -->
             <input type="text" id="name" name="name" class="input" placeholder="Nome completo" required maxlength="100">
+            <!-- Campo de entrada para a idade do usuário, permitindo somente números entre 18 e 120 -->
             <input type="number" id="age" name="age" class="input" placeholder="Idade" min="18" required maxlength="100" max="120">
+            <!-- Campo de entrada para o contato do usuário (pode ser e-mail ou telefone) -->
             <input type="text" id="contact" name="contact" class="input" placeholder="Email ou telefone" required>
+            <!-- Campo de entrada para a senha do usuário -->
             <input type="password" id="password" name="password" class="input" placeholder="Senha" required maxlength="100">
             
+            <!-- Botão para enviar o formulário de registro -->
             <button type="submit">Registrar</button>
         </form>
 
+        <!-- Rodapé do formulário com link para a página de login -->
         <div id="loginFormFooter">
             <a href="login.html">Já tem conta? Faça login</a>
         </div>
 
+        <!-- Espaço destinado para exibir mensagens de erro ou sucesso -->
         <div id="message"></div>
     </main>
 
+    <!-- Script externo que contém a lógica para manipulação do formulário de registro -->
     <script src="../js/register.js"></script>
 </body>
 </html>

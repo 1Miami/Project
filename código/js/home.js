@@ -198,6 +198,8 @@ async function entrarCardEvento(button) {
       console.error(`Erro ao buscar os dados do evento ${selectedEvent}:`, error.message);
   }
 }
+
+// Coleta todas as infos dos campos do home "Buscas"
 function filterEventsAndGroups() {
   const searchInput = document.getElementById('searchInput').value.toLowerCase();
   const filterDate = document.getElementById('filterDate').value;
